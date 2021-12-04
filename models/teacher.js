@@ -7,7 +7,6 @@ var teacherSchema = new Schema({
     },
     designation: {
         type: String,
-        required: true
     }
 });
 

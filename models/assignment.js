@@ -26,7 +26,6 @@ var assignSchema = new Schema({
     },
     startime: {
         type: String,
-        // Failed to enter Date DataType into PostMan
     },
     endtime: {
         type: String,

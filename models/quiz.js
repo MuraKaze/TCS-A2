@@ -8,17 +8,21 @@ var quizSchema = new Schema({
     questions: {
         type: String,
     },
-    class: {
+    cid: {
         type: mongoose.Types.ObjectId,
-            ref: "Class",
+        ref: "Class",
     },
-    //Moved Response to Response Model
-    startime: {
-        type: String,
+    response: {
+        type: [{
+            sid: { type: mongoose.Types.ObjectId, ref: "student" },
+            response: {
+                type: String,
+            },
+        }, ],
     },
-    endtime: {
-        type: String,
-    },
+    total: {
+        type: Number
+    }
 });
 
 module.exports = mongoose.model("Quiz", quizSchema);
